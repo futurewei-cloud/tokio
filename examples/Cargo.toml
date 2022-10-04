@@ -31,13 +31,14 @@ version = "0.3.8"
 name = "chat"
 path = "chat.rs"
 
-[[example]]
-name = "connect"
-path = "connect.rs"
-
-[[example]]
-name = "echo-udp"
-path = "echo-udp.rs"
+# Ignored: UDP is not supported by WASM.
+# [[example]]
+# name = "connect"
+# path = "connect.rs"
+#
+# [[example]]
+# name = "echo-udp"
+# path = "echo-udp.rs"
 
 [[example]]
 name = "echo"
@@ -59,34 +60,37 @@ path = "proxy.rs"
 name = "tinydb"
 path = "tinydb.rs"
 
-[[example]]
-name = "udp-client"
-path = "udp-client.rs"
-
-[[example]]
-name = "udp-codec"
-path = "udp-codec.rs"
+# Ignored: UDP is not supported by WASM.
+# [[example]]
+# name = "udp-client"
+# path = "udp-client.rs"
+# 
+# [[example]]
+# name = "udp-codec"
+# path = "udp-codec.rs"
 
 [[example]]
 name = "tinyhttp"
 path = "tinyhttp.rs"
 
-[[example]]
-name = "custom-executor"
-path = "custom-executor.rs"
+# Ignored: Need multi-thread runtime.
+# [[example]]
+# name = "custom-executor"
+# path = "custom-executor.rs"
+#
+# [[example]]
+# name = "custom-executor-tokio-context"
+# path = "custom-executor-tokio-context.rs"
 
-[[example]]
-name = "custom-executor-tokio-context"
-path = "custom-executor-tokio-context.rs"
-
-[[example]]
-name = "named-pipe"
-path = "named-pipe.rs"
-
-[[example]]
-name = "named-pipe-ready"
-path = "named-pipe-ready.rs"
-
-[[example]]
-name = "named-pipe-multi-client"
-path = "named-pipe-multi-client.rs"
+# Ignored: Named pipes are only supported on windows.
+# [[example]]
+# name = "named-pipe"
+# path = "named-pipe.rs"
+# 
+# [[example]]
+# name = "named-pipe-ready"
+# path = "named-pipe-ready.rs"
+# 
+# [[example]]
+# name = "named-pipe-multi-client"
+# path = "named-pipe-multi-client.rs"

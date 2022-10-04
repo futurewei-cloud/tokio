@@ -447,19 +447,19 @@ compile_error! {
 ))]
 compile_error!("Tokio's build script has incorrectly detected wasm.");
 
-#[cfg(all(
-    not(tokio_unstable),
-    tokio_wasm,
-    any(
-        feature = "fs",
-        feature = "io-std",
-        feature = "net",
-        feature = "process",
-        feature = "rt-multi-thread",
-        feature = "signal"
-    )
-))]
-compile_error!("Only features sync,macros,io-util,rt,time are supported on wasm.");
+// #[cfg(all(
+//     not(tokio_unstable),
+//     tokio_wasm,
+//     any(
+//         feature = "fs",
+//         feature = "io-std",
+//         feature = "net",
+//         feature = "process",
+//         feature = "rt-multi-thread",
+//         feature = "signal"
+//     )
+// ))]
+// compile_error!("Only features sync,macros,io-util,rt,time are supported on wasm.");
 
 // Includes re-exports used by macros.
 //

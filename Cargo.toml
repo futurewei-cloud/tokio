@@ -10,7 +10,11 @@ members = [
   # Internal
   "benches",
   "examples",
-  "stress-test",
   "tests-build",
   "tests-integration",
+]
+
+# Ignored since it need multi-thread runtime.
+exclude = [
+  "stress-test",
 ]

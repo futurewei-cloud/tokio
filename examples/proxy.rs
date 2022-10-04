@@ -30,7 +30,7 @@ use futures::FutureExt;
 use std::env;
 use std::error::Error;
 
-#[tokio::main]
+#[tokio::main(flavor = "current_thread")]
 async fn main() -> Result<(), Box<dyn Error>> {
     let listen_addr = env::args()
         .nth(1)
