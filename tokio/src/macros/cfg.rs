@@ -61,7 +61,6 @@ macro_rules! cfg_fs {
     ($($item:item)*) => {
         $(
             #[cfg(feature = "fs")]
-            #[cfg(not(tokio_wasi))]
             #[cfg_attr(docsrs, doc(cfg(feature = "fs")))]
             $item
         )*
