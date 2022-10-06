@@ -394,16 +394,14 @@ mod sys {
     }
 }
 
-cfg_unstable! {
-    #[cfg(tokio_wasi)]
-    mod sys {
-        use super::TcpListener;
-        use std::os::wasi::prelude::*;
+#[cfg(tokio_wasi)]
+mod sys {
+    use super::TcpListener;
+    use std::os::wasi::prelude::*;
 
-        impl AsRawFd for TcpListener {
-            fn as_raw_fd(&self) -> RawFd {
-                self.io.as_raw_fd()
-            }
+    impl AsRawFd for TcpListener {
+        fn as_raw_fd(&self) -> RawFd {
+            self.io.as_raw_fd()
         }
     }
 }

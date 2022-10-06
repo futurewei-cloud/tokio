@@ -1312,7 +1312,7 @@ impl fmt::Debug for TcpStream {
     }
 }
 
-#[cfg(unix)]
+#[cfg(any(unix))]
 mod sys {
     use super::TcpStream;
     use std::os::unix::prelude::*;
@@ -1336,7 +1336,7 @@ mod sys {
     }
 }
 
-#[cfg(all(tokio_unstable, tokio_wasi))]
+#[cfg(tokio_wasi)]
 mod sys {
     use super::TcpStream;
     use std::os::wasi::prelude::*;
